@@ -61,10 +61,9 @@ import Icon from "@/components/icons/icon-code.vue";
       <p class="img"> <img :src="image_url" alt="icon" width="45" height="45"/> {{ weather.description }}</p>
       <p>давление: {{info.pressure}} гПа</p>
       <p>влажность: {{info.humidity}}%</p>
-      <p>{{ Math.round(info.temp_min) }}, {{ Math.round(info.temp_max)}}</p>
     </div>
 <!--    детали  // #045d78-->
-    <div>
+    <div class="wind">
       <p>Скорость ветра: {{Math.round(wind.speed)}}м/с</p>
       <p v-if="wind.gust">порывы: {{ Math.round(wind.gust) }}м/c</p>
       <p>направление ветра: {{ wind.deg }}°</p>
@@ -106,5 +105,9 @@ import Icon from "@/components/icons/icon-code.vue";
 .img {
   display: flex;
   align-items: center;
+}
+
+.wind {
+  place-self: center;
 }
 </style>

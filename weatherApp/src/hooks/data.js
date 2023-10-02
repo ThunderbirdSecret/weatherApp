@@ -13,7 +13,6 @@ export const state = reactive({
 export async function getWeather() {
     try {
         const currData = await Api(state.defaultCity)
-        console.log(currData)
         state.currDesc = currData.main
         state.weatherData = currData.weather[0]
         state.wind = currData.wind

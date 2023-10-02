@@ -59,5 +59,5 @@ export default {
 </script>
 
 <template>
-  <img :src="weather  " alt="icon" />
+  <img :src="weather" alt="icon" />
 </template>

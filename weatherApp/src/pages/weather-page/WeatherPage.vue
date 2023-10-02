@@ -22,6 +22,7 @@ onMounted(getWeather)
      </div>
      <div class="description">
        <h1>{{state.city}}</h1>
+       <p>{{Math.round(state.currDesc.temp_min)}}℃ - {{Math.round(state.currDesc.temp_max)}}℃</p>
        <Description :info="state.currDesc" :weather="state.weatherData" :wind="state.wind"/>
      </div>
    </div>
